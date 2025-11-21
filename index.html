@@ -5,130 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
-    <title>Custom Form Example</title>
+    <title>Submission Form</title>
   </head>
+
   <body>
     <div class="form">
-      <form action="https://getform.io/f/broorvka" method="POST" enctype="multipart/form-data">
-        
-        <!-- First Question (Radio Buttons) -->
-        <div class="form-group">
-          <label class="question-title">YOUR ORIGINAL WORK IS</label>
-          <div class="radio-group">
-            <div>
-              <input type="radio" id="code-based" name="work-type" value="code-based" required />
-              <label for="code-based" class="option-label">code-based (could be exported as svg, json, or g-code)</label>
-            </div>
-            <div>
-              <input type="radio" id="image-based" name="work-type" value="image-based" required />
-              <label for="image-based" class="option-label">image-based (available as png or jpeg only)</label>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Second Question (Checkboxes) -->
-        <div class="form-group">
-          <label>PHYSICAL MEDIA YOU WISH TO TRY FOR THIS WORK <br><span class="sub-text">(select all that applies, that'll help for the media simulation)</span></label>
 
-          <div class="checkbox-group">
-            <div>
-              <input type="checkbox" id="acrylic" name="media[]" value="acrylic" />
-              <label for="acrylic" class="option-label">acrylic paint</label>
-            </div>
-            <div>
-              <input type="checkbox" id="oil" name="media[]" value="oil" />
-              <label for="oil" class="option-label">oil paint</label>
-            </div>
-            <div>
-              <input type="checkbox" id="pencils" name="media[]" value="pencils" />
-              <label for="pencils" class="option-label">pencils</label>
-            </div>
-            <div>
-              <input type="checkbox" id="pen" name="media[]" value="pen" />
-              <label for="pen" class="option-label">pen</label>
-            </div>
-            <div>
-              <input type="checkbox" id="paper" name="media[]" value="paper" />
-              <label for="paper" class="option-label"> on paper</label>
-            </div>
-            <div>
-              <input type="checkbox" id="canvas" name="media[]" value="canvas" />
-              <label for="canvas" class="option-label">on canvas</label>
-            </div>
-            <div>
-              <input type="checkbox" id="textiles" name="media[]" value="textiles" />
-              <label for="textiles" class="option-label">on textile</label>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Third Question (Radio Buttons) -->
-        <div class="form-group">
-          <label class="question-title">LEVEL OF TRANSFORMATION</label>
-          <div class="radio-group">
-            <div>
-              <input type="radio" id="direct-transfer" name="transformation-level" value="direct-transfer" required />
-              <label for="direct-transfer" class="option-label">direct transfer from the original</label>
-            </div>
-            <div>
-              <input type="radio" id="close-to-original" name="transformation-level" value="close-to-original" required />
-              <label for="close-to-original" class="option-label">close to the original, some stylization is acceptable</label>
-            </div>
-            <div>
-              <input type="radio" id="open" name="transformation-level" value="open" required />
-              <label for="open" class="option-label">open to see what's possible</label>
-            </div>
-          </div>
-        </div>
-  
- <!-- Size Question (Width & Height on the Same Line) -->
-<div class="form-group size">
-  <label class="question-title">SIZE (cm):</label>
-  <div class="size-fields">
-    <div class="size-item">
-      <label for="w">width:</label>
-      <input type="number" id="w" name="width" required />
-    </div>
-    <div class="size-item">
-      <label for="h">height:</label>
-      <input type="number" id="h" name="height" required />
-    </div>
-  </div>
-</div>
+      <form action="https://getform.io/f/your-endpoint" method="POST" enctype="multipart/form-data">
 
+        <!-- Form Title (static text, not a field) -->
+        <div class="form-group">
+          <div class="form-title">SUBMIT IMAGE</div>
+        </div>
 
-        <!-- Attach Work Sample -->
+        <!-- About Paragraph (static text, not a field) -->
         <div class="form-group">
-          <label for="file" class="question-title">ATTACH YOUR WORK SAMPLE</label>
-          <input type="file" name="file" id="file" />
+          <p class="option-label">
+            This form is for submitting your work to be considered for future experiments,
+            collaborations, and physical translations by the machine.
+          </p>
         </div>
-  
-        <!-- Provide a Link -->
-        <div class="form-group">
-          <label for="link" class="question-title">OR PROVIDE LINK IF IT'S ONLINE</label>
-          <input type="url" name="link" id="link" />
-        </div>
-  
+
         <!-- Your Name -->
         <div class="form-group">
-          <label for="name" class="question-title">YOUR NAME</label>
+          <label class="question-title">YOUR NAME (OR NICKNAME)</label>
           <input type="text" name="name" id="name" required />
         </div>
-  
-        <!-- Your Email -->
+
+        <!-- Upload File -->
         <div class="form-group">
-          <label for="email" class="question-title">YOUR EMAIL</label>
-          <input type="email" name="email" id="email" required />
+          <label class="question-title">UPLOAD YOUR FILE</label>
+          <input type="file" name="file" id="file" required />
         </div>
-  
+
+        <!-- Email (optional) -->
+        <div class="form-group">
+          <label class="question-title">CONTACT EMAIL (OPTIONAL)</label>
+          <input type="email" name="email" id="email" />
+        </div>
+
         <!-- Submit Button -->
         <div class="form-group">
           <button type="submit" class="button-15-1">
-            <a href="#">SUBMIT</a>
+            <a href="#">SEND</a>
           </button>
         </div>
+
       </form>
     </div>
   </body>
-  
 </html>
