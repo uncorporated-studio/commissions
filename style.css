@@ -41,6 +41,13 @@ form {
   margin-bottom: 2rem; /* Space between label and options/input fields */
 }
 
+.form-title {
+  font-size: 1.6rem;
+  font-weight: 500; /* Bold for question titles */
+  color: rgba(0, 0, 0, 0.85);
+  margin-bottom: 2rem; /* Space between label and options/input fields */
+}
+
 /* Style for the additional text */
 .sub-text {
   display: block; /* Forces the text to appear on a new line */
@@ -255,4 +262,41 @@ input[type="checkbox"]:checked::after {
 .button-15-1:hover a {
   background-color: #f94b15;
   
+}
+
+
+/* MOBILE STYLES */
+@media (max-width: 600px) {
+
+  .form {
+    padding: 0.5rem;
+  }
+
+  form {
+    gap: 0.5rem;
+  }
+
+  .question-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="number"],
+  input[type="file"],
+  select {
+    height: 2rem;
+    font-size: 1rem;
+  }
+
+  .button-15-1 {
+    font-size: 1.1rem;
+    padding: 0.6rem;
+  }
+
+  .button-15-1 a {
+    padding: 0.6rem;
+  }
 }
