@@ -14,34 +14,51 @@
       <form action="https://getform.io/f/your-endpoint" method="POST" enctype="multipart/form-data">
 
         <!-- Form Title (static text, not a field) -->
-        <div class="form-group">
-          <div class="form-title">SUBMIT IMAGE</div>
+        <div class="form-group title-group">
+          <div class="form-title">Machine Visions</div>
         </div>
+
 
         <!-- About Paragraph (static text, not a field) -->
         <div class="form-group">
           <p class="option-label">
-            This form is for submitting your work to be considered for future experiments,
-            collaborations, and physical translations by the machine.
+            Please submit an image you’d like process with the machine vision algorith. Once ready, the renderings will be sent to you by email.
+            Your image will remain private and anonymous. Nothing will be published or shared without your explicit permission.
           </p>
+        </div>
+
+
+        <!-- Upload File -->
+        <div class="form-group">
+          <label class="question-title">Upload Your Image<br><span class="sub-text">file format .png or .jpg, max file size 10 MB</span> </label>
+          <input type="file" name="file" id="file" required />
         </div>
 
         <!-- Your Name -->
         <div class="form-group">
-          <label class="question-title">YOUR NAME (OR NICKNAME)</label>
+          <label class="question-title">Your Name (or nickname)</label>
           <input type="text" name="name" id="name" required />
-        </div>
-
-        <!-- Upload File -->
-        <div class="form-group">
-          <label class="question-title">UPLOAD YOUR FILE</label>
-          <input type="file" name="file" id="file" required />
         </div>
 
         <!-- Email (optional) -->
         <div class="form-group">
-          <label class="question-title">CONTACT EMAIL (OPTIONAL)</label>
-          <input type="email" name="email" id="email" />
+          <label class="question-title"> Your Email <br><span class="sub-text">We will send the renderings to your email</span></label>
+          <input type="email" name="email" id="email" required />
+        </div>
+
+        <!-- Based in Switzerland -->
+        <div class="form-group">
+          <label class="question-title">Are You Based In Switzerland?</label>
+          <div class="radio-group">
+            <div>
+              <input type="radio" id="code-based" name="work-type" value="yes" required />
+              <label for="code-based" class="option-label">yes</label>
+            </div>
+            <div>
+              <input type="radio" id="image-based" name="work-type" value="no" required />
+              <label for="image-based" class="option-label">no</label>
+            </div>
+          </div>
         </div>
 
         <!-- Submit Button -->
@@ -49,6 +66,12 @@
           <button type="submit" class="button-15-1">
             <a href="#">SEND</a>
           </button>
+        </div>
+
+
+        <!-- Form Footer -->
+        <div class="form-footer">
+           copyright uncorporated studio 2025 ©
         </div>
 
       </form>

@@ -33,19 +33,27 @@ form {
   gap: 0rem;
 }
 
+/* Title group should not behave like normal sections */
+.title-group {
+  margin-bottom: 0rem !important;
+  padding-bottom: 0rem !important;
+  border-bottom: none !important;  /* remove the line under the title */
+}
+
+/* Title styling */
+.form-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;  /* small controlled spacing */
+}
+
 /* Label styling (for questions and options) */
 .question-title {
+  display: block;   
   font-size: 1.1rem;
   font-weight: 400; /* Bold for question titles */
   color: rgba(0, 0, 0, 0.85);
-  margin-bottom: 2rem; /* Space between label and options/input fields */
-}
-
-.form-title {
-  font-size: 1.6rem;
-  font-weight: 500; /* Bold for question titles */
-  color: rgba(0, 0, 0, 0.85);
-  margin-bottom: 2rem; /* Space between label and options/input fields */
+  margin-bottom: 0.4rem; /* Space between label and options/input fields */
 }
 
 /* Style for the additional text */
@@ -231,8 +239,8 @@ input[type="checkbox"]:checked::after {
 /* Button Styling */
 .button-15-1 {
   width: 100%;
-  padding: 0.8rem;
-  font-size: 1.5rem;
+  padding: 0.6rem;
+  font-size: 1.2rem;
   font-family: "Diatype Regular", sans-serif; /* Apply Diatype Regular to button */
   background-color: #bcebfa;
   color: rgba(0, 0, 0, 0.85);
@@ -264,12 +272,23 @@ input[type="checkbox"]:checked::after {
   
 }
 
+.form-footer {
+  font-size: 0.9rem;                /* caption size */
+  color: rgba(0, 0, 0, 0.45);       /* softer caption grey */
+  font-weight: 300;
+  font-family: "Diatype Regular", sans-serif;
+
+  text-align: center;
+  margin-top: 3rem;                 /* space above footer */
+  padding-bottom: 1rem;             /* spacing from page bottom */
+}
+
 
 /* MOBILE STYLES */
 @media (max-width: 600px) {
 
   .form {
-    padding: 0.5rem;
+    padding: 2rem;
   }
 
   form {
@@ -292,11 +311,11 @@ input[type="checkbox"]:checked::after {
   }
 
   .button-15-1 {
-    font-size: 1.1rem;
-    padding: 0.6rem;
+    font-size: 1rem;
+    padding: 0.4rem;
   }
 
   .button-15-1 a {
-    padding: 0.6rem;
+    padding: 0.4rem;
   }
 }
